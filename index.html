@@ -20,9 +20,15 @@
       display: block;
       border-radius: 12px;
     }
+
+    #image-fallback {
+      display: none;
+      font-family: Arial, sans-serif;
+    }
   </style>
 </head>
 <body>
-  <img src="https://github.com/openquantai.png" alt="OpenQuantAI GitHub profile picture">
+  <img src="https://github.com/openquantai.png" alt="OpenQuantAI GitHub profile picture" onerror="this.style.display='none'; document.getElementById('image-fallback').style.display='block';">
+  <p id="image-fallback">OpenQuantAI GitHub profile picture is unavailable.</p>
 </body>
 </html>
