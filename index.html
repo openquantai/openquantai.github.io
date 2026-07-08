@@ -28,7 +28,16 @@
   </style>
 </head>
 <body>
-  <img src="https://github.com/openquantai.png" alt="OpenQuantAI GitHub profile picture" onerror="this.style.display='none'; document.getElementById('image-fallback').style.display='block';">
-  <p id="image-fallback">OpenQuantAI GitHub profile picture is unavailable.</p>
+  <img id="profile-image" src="https://github.com/openquantai.png" alt="OpenQuantAI GitHub profile picture">
+  <p id="image-fallback" role="alert">OpenQuantAI GitHub profile picture is unavailable.</p>
+  <script>
+    const profileImage = document.getElementById("profile-image");
+    const imageFallback = document.getElementById("image-fallback");
+
+    profileImage.addEventListener("error", () => {
+      profileImage.style.display = "none";
+      imageFallback.style.display = "block";
+    });
+  </script>
 </body>
 </html>
