@@ -24,19 +24,20 @@
     #image-fallback {
       font-family: Arial, sans-serif;
       text-align: center;
+      display: none;
     }
   </style>
 </head>
 <body>
   <img id="profile-image" src="https://github.com/openquantai.png" alt="OpenQuantAI profile picture">
-  <p id="image-fallback" role="status" aria-live="polite" aria-atomic="true" hidden>Image temporarily unavailable.</p>
+  <p id="image-fallback" role="status" aria-live="polite" aria-atomic="true">Image temporarily unavailable.</p>
   <script>
     const profileImage = document.getElementById("profile-image");
     const imageFallback = document.getElementById("image-fallback");
 
     profileImage.addEventListener("error", () => {
       profileImage.style.display = "none";
-      imageFallback.hidden = false;
+      imageFallback.style.display = "block";
     });
   </script>
 </body>
