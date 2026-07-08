@@ -15,29 +15,35 @@
     }
 
     img {
-      max-width: min(80vw, 420px);
+      width: min(80vw, 420px);
+      max-width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       height: auto;
       display: block;
       border-radius: 12px;
     }
 
+    .is-hidden {
+      display: none !important;
+    }
+
     #image-fallback {
       font-family: Arial, sans-serif;
       text-align: center;
-      display: none;
     }
   </style>
 </head>
 <body>
   <img id="profile-image" src="https://github.com/openquantai.png" alt="OpenQuantAI profile picture">
-  <p id="image-fallback" role="status" aria-live="polite" aria-atomic="true">Image temporarily unavailable.</p>
+  <p id="image-fallback" class="is-hidden" role="status" aria-live="polite" aria-atomic="true">Image temporarily unavailable.</p>
   <script>
     const profileImage = document.getElementById("profile-image");
     const imageFallback = document.getElementById("image-fallback");
 
     profileImage.addEventListener("error", () => {
-      profileImage.style.display = "none";
-      imageFallback.style.display = "block";
+      profileImage.classList.add("is-hidden");
+      imageFallback.classList.remove("is-hidden");
     });
   </script>
 </body>
