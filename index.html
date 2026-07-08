@@ -34,16 +34,22 @@
   </style>
 </head>
 <body>
-  <img id="profile-image" src="https://github.com/openquantai.png" alt="OpenQuantAI brand image">
+  <img id="profile-image" src="https://github.com/openquantai.png" alt="OpenQuantAI brand image" loading="eager">
   <p id="image-fallback" class="is-hidden" role="status" aria-live="polite" aria-atomic="true">Image temporarily unavailable.</p>
   <script>
     const profileImage = document.getElementById("profile-image");
     const imageFallback = document.getElementById("image-fallback");
 
-    profileImage.addEventListener("error", () => {
+    const showFallback = () => {
       profileImage.classList.add("is-hidden");
       imageFallback.classList.remove("is-hidden");
-    });
+    };
+
+    profileImage.addEventListener("error", showFallback);
+
+    if (profileImage.complete && profileImage.naturalWidth === 0) {
+      showFallback();
+    }
   </script>
 </body>
 </html>
