@@ -22,21 +22,20 @@
     }
 
     #image-fallback {
-      display: none;
       font-family: Arial, sans-serif;
     }
   </style>
 </head>
 <body>
-  <img id="profile-image" src="https://github.com/openquantai.png" alt="OpenQuantAI GitHub profile picture">
-  <p id="image-fallback" role="alert">OpenQuantAI GitHub profile picture is unavailable.</p>
+  <img id="profile-image" src="https://github.com/openquantai.png" alt="OpenQuantAI GitHub profile picture" width="420" height="420">
+  <p id="image-fallback" aria-live="assertive" aria-atomic="true" hidden>OpenQuantAI GitHub profile picture is unavailable.</p>
   <script>
     const profileImage = document.getElementById("profile-image");
     const imageFallback = document.getElementById("image-fallback");
 
     profileImage.addEventListener("error", () => {
       profileImage.style.display = "none";
-      imageFallback.style.display = "block";
+      imageFallback.hidden = false;
     });
   </script>
 </body>
