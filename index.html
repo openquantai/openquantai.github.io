@@ -1,55 +1,34 @@
-<!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OpenQuantAI</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-    }
-
-    #profile-image {
-      width: min(80vw, 420px);
-      max-width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      display: block;
-      border-radius: 12px;
-    }
-
-    .is-hidden {
-      display: none;
-    }
-
-    #image-fallback {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-  </style>
+<title>Open Quant - The Data and AI Benchmarking Platform for Mathematical Finance</title>
+<link rel="stylesheet" type="text/css" href="/formate.css"/>
+<link rel="icon" type="image/png" href="/favicon.png" sizes="any"/>
 </head>
 <body>
-  <img id="profile-image" src="https://github.com/openquantai.png" alt="OpenQuantAI brand image" loading="eager">
-  <p id="image-fallback" class="is-hidden" role="status" aria-live="polite" aria-atomic="true">Image temporarily unavailable.</p>
-  <script>
-    const profileImage = document.getElementById("profile-image");
-    const imageFallback = document.getElementById("image-fallback");
-
-    const showFallback = () => {
-      profileImage.classList.add("is-hidden");
-      imageFallback.classList.remove("is-hidden");
-    };
-
-    profileImage.addEventListener("error", showFallback);
-
-    if (profileImage.complete && profileImage.naturalWidth === 0) {
-      showFallback();
-    }
-  </script>
+<div align="center" style="display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+    <table>
+        <tr>
+            <td align="center">
+        	<img src="images/open-quant-ai-bevel-400.png" alt="Open-Quant.ai logo"
+            width=200 heigh=200 style="height: auto;" />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; font-size: 24px; font-weight: bold;">
+                &nbsp;<br>
+                <hr style="border: 1px solid #000; width: 70%; margin: 10px auto;">
+                <br>
+                Open Quant
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; font-size: 18px;">
+                The Data and AI Benchmarking Platform for Mathematical Finance
+                <br>
+                <i>- est. 2026 -</i>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
