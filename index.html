@@ -1,34 +1,69 @@
+<!doctype html>
 <html>
 <head>
 <title>Open Quant - The Data and AI Benchmarking Platform for Mathematical Finance</title>
 <link rel="stylesheet" type="text/css" href="/formate.css"/>
 <link rel="icon" type="image/png" href="/favicon.png" sizes="any"/>
+
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;   /* horizontal centre */
+    align-items: center;       /* vertical centre */
+    font-family: sans-serif, Arial, Verdana;
+}
+
+.hero {
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.divider {
+    border: 1px solid #000;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.subtitle {
+    font-size: 18px;
+}
+</style>
 </head>
+
 <body>
-<div align="center"">
-    <table>
-        <tr>
-            <td align="center">
-        	<img src="images/open-quant-ai-bevel-400.png" alt="Open-Quant.ai logo"
-            width=200 heigh=200 style="height: auto;" />
-            </td>
-        </tr>
-        <tr>
-            <td style="text-align: center; font-size: 24px; font-weight: bold;">
-                &nbsp;<br>
-                <hr style="border: 1px solid #000; width: 70%; margin: 10px auto;">
-                <br>
-                Open Quant
-            </td>
-        </tr>
-        <tr>
-            <td style="text-align: center; font-size: 18px;">
-                The Data and AI Benchmarking Platform for Mathematical Finance
-                <br>
-                <i>- est. 2026 -</i>
-            </td>
-        </tr>
-    </table>
-</div>
+    <div class="hero">
+        <img
+            class="logo"
+            src="images/open-quant-ai-bevel-400.png"
+            alt="Open-Quant.ai logo"
+        />
+
+        <hr class="divider">
+
+        <div class="title">
+            Open Quant
+        </div>
+
+        <div class="subtitle">
+            The Data and AI Benchmarking Platform for Mathematical Finance
+            <br>
+            <i>- est. 2026 -</i>
+        </div>
+    </div>
 </body>
 </html>
